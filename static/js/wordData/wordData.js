@@ -71,7 +71,3 @@ ALL_CATEGORY_WORDS.push(new Category_word(
 
 
 
-
-console.log(ALL_WORDNODES)
-console.log(ALL_CATEGORIES)
-console.log(ALL_CATEGORY_WORDS)
