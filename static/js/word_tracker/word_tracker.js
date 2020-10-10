@@ -44,7 +44,7 @@ function word_tracker(props) {
     const fillFunc = (d) => {
         let stage = d.stage;
         return (stage == 1) ? '#d4d4d4' :
-        (stage == 2) ? '#de425bab' :
+        (stage == 2) ? '#00ff00ab' :
         (stage == 3) ? '#de425b' : '#000';
     }
 
