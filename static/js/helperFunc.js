@@ -13,6 +13,6 @@ function shuffle_array(input_array) {
     return output_array;
 }
 
-function copy(input_array, num) {
+function copy(input_array, num = input_array.length) {
     return [...input_array].splice(0, num).map(d => {return {...d}})
 }
