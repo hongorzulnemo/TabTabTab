@@ -82,13 +82,14 @@ function word_map(props) {
         return d.imgUrl;
     }
     // Boxes Image START
+    const boxPadding = 60;
     const box_image = new GeneralUpdatePattern('box_image', data, 'image', main_ContGroup.group);        
     box_image.merge
         .attr('href', imageHrefFunc)
-        .attr('height', boxLength - 40)
-        .attr('width', boxLength - 40)
-        .attr('x', 20)
-        .attr('y', 20)
+        .attr('height', boxLength - boxPadding)
+        .attr('width', boxLength - boxPadding)
+        .attr('x', boxPadding / 2)
+        .attr('y', boxPadding / 2)
         .attr('preserveAspectRatio', 'xMidYMid slice')
         .attr('transform', translationFunc);
     box_image.exit.remove();
@@ -100,10 +101,10 @@ function word_map(props) {
     const box_text_rect_width = boxLength;
     const box_text_rect = new GeneralUpdatePattern('box_text_rect', data, 'rect', main_ContGroup.group);        
     box_text_rect.merge
-        .attr('x', d => boxLength / 2 - box_text_rect_width / 2)
-        .attr('y', boxLength - box_text_rect_height)
-        .attr('width', box_text_rect_width - 40)
-        .attr('height', box_text_rect_height - 40)
+        .attr('x', d => boxLength / 2 - box_text_rect_width / 2 + boxPadding / 2)
+        .attr('y', boxLength - box_text_rect_height - boxPadding / 2)
+        .attr('width', box_text_rect_width - boxPadding)
+        .attr('height', box_text_rect_height)
         .attr('fill', '#fff')
         .attr('transform', translationFunc);
     box_text_rect.exit.remove();
@@ -114,7 +115,7 @@ function word_map(props) {
     box_text.merge
         .attr('x', d => boxLength / 2)
         .attr('text-anchor', 'middle')
-        .attr('y', boxLength - 60 * 0.5)
+        .attr('y', boxLength - 60 * 0.5 - boxPadding / 2)
         .text(d => boxTextFunc(d))
         .attr('transform', translationFunc);
     box_text.exit.remove();
