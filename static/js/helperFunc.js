@@ -6,7 +6,7 @@ function generateRandomInteger(a, b) {
 }
 
 function randomlyChooseOneElement(input_array) {
-    return input_array[generateRandomInteger(0, input_array.length)];
+    return copy(input_array)[generateRandomInteger(0, input_array.length)];
 }
 function shuffle_array(input_array) {
     const output_array = [...input_array];
@@ -97,7 +97,11 @@ function generateNewWordNodes(word_id, cat_id, numNodes) {
     const wordnodes = catWords.map(cw => {
         return ALL_WORDNODES.filter(wd => wd.id === cw.word_id)[0];
     });
-    return copy(wordnodes, numNodes);
+
+
+    // console.log('---------------------------')
+    // ALL_WORDNODES.forEach(dd => console.log(dd.stage))
+    return copy(shuffle_array(wordnodes), numNodes);
 }
 function findDifferentWordNodes(word_id, cat_id, numDifferent) {
     const catWords = ALL_CATEGORY_WORDS.filter(cw => !(cw.word_id === word_id || cw.category_id === cat_id));
@@ -114,7 +118,8 @@ function findDifferentWordNodes(word_id, cat_id, numDifferent) {
 // 3. Get 1 different word of different category
 // 4. Rewrite global array with these n elements;
 function generateGraphData(selectedWordNode) {
-    selectedWordNode.stage = 2;
+    selectedWordNode.stage = 3;
+
     const selectedCategory = findOneCategory(selectedWordNode.id);
     const newWordNodes = generateNewWordNodes(selectedWordNode.id, selectedCategory.id, TOTAL_NUMBER_OF_NODES - 2);
     const differentWordNodes = findDifferentWordNodes(selectedWordNode.id, selectedCategory.id, 1);
