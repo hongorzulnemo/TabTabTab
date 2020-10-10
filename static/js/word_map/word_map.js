@@ -141,30 +141,10 @@ function word_map(props) {
         })
         .on('click', function(i, d) {
 
-            // // Update Word Map
-            // selected.stage = 2;
-            // // diagram_data = copy(shuffle_array([...ALL_WORDNODES]), 3);
-            // diagram_data = copy(generateSomeDataOfSameCategory(selected), 2);
-            // console.log(diagram_data)
-
-
-
-            
-            // 0. Create a new one
+            // Update Word Map
             const selectedWordNode = copy(ALL_WORDNODES).filter(wd => wd.id === d.id)[0];
-            selectedWordNode.stage = 2;
-            // 1. Find out one of its categories
-            const selectedCategory = findOneCategory(selectedWordNode.id);
-            // 2. Get n-2 number of words of that category
-            const newWordNodes = generateNewWordNodes(selectedWordNode.id, selectedCategory.id, TOTAL_NUMBER_OF_NODES - 2);
-            // 3. Get 1 different word of different category
-            const differentWordNodes = findDifferentWordNodes(selectedWordNode.id, selectedCategory.id, 1);
-            // 4. Rewrite global array with these n elements;
-            diagram_data = [...newWordNodes, ...differentWordNodes, selectedWordNode];
+            diagram_data = generateGraphData(selectedWordNode);
             updateWordMap();
-
-
-
 
 
             // Update Word Tracker
