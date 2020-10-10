@@ -44,7 +44,9 @@ function word_map(props) {
         return d.name;
     }
 
+    // console.log('----')
     const fillFunc = (d) => {
+        // console.log(d)
         let stage = d.stage;
         return (stage == 1) ? fillFunc_color_array_word_map[1] :
         (stage == 2) ? fillFunc_color_array_word_map[2] :

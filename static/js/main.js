@@ -26,12 +26,6 @@ updateWordMap()
 
 
 
-
-
-
-
-
-
 let wordTracker_data = copy(ALL_WORDNODES);
 let wordTrackerProps = {
     data: wordTracker_data,
