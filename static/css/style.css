@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
 .diagram-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,5 +16,150 @@
 
 .box_text {
   font-size: 3rem;
+}
+/*# sourceMappingURL=style.css.map */
+
+.cont {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    padding-top: 3%;
+}
+
+.word-cont {
+    padding: 10%;
+}
+
+.col1 {
+    width: 50%;
+    padding-top: 2%;
+}
+
+.col2 {
+    width: 50%;
+}
+
+
+.flex_column {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-link {
+    font-size: 1.3rem;
+    color: #202336;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    background-image: url('/static/assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.register-btn {
+    background: #FB8F1D;
+    width: 140px;
+}
+
+.login-btn {
+    border: 1px solid #FB8F1D;
+    width: 140px;
+    color: #FB8F1D;
+}
+
+#tablogo {
+    height: 85px;
+}
+
+button {
+    border-radius: 10px !important;
+    height: 40px;
+}
+
+#home-page-text {
+    font-family: Playfair Display;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #202336;
+}
+
+.start-btn {
+    background: #FB8F1D;
+    width: 200px;
+    height: 60px;
+    font-size: 1.5rem !important;
+}
+
+.align-center {
+    margin: auto;
+    width: 80%;
+    padding-top: 10%;
+}
+
+.navbar-collapse {
+    padding-bottom: 10%;
+}
+
+.text-white {
+    color: white;
+}
+
+#left-arrow {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    height: 80px;
+}
+
+#right-arrow {
+    height: 80px;
+    top: 45%;
+    right: 10%;
+    position: absolute;
+}
+
+#tropy-arrow {
+    height: 80px;
+    top: 10%;
+    left: 10%;
+    position: absolute;
+}
+
+#home-arrow {
+    height: 80px;
+    top: 10%;
+    right: 10%;
+    position: absolute;
+}
+
+#learn-header {
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#tropy {
+    height: 180px;
+    top: 4%;
+    left: 43%;
+    position: absolute;
+}
+
+.tropy-cont {
+    padding-top: 18%;
 }
 /*# sourceMappingURL=style.css.map */
