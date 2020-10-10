@@ -16,4 +16,17 @@
     height: 200px;
     border: 0px solid #737171eb;
     box-shadow: 0px 0px 4px 2px #595956db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+
+    cursor: pointer;
+    &:hover {
+        background: darken(#fff, 15%);
+    }
 }

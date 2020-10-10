@@ -7,6 +7,7 @@
 const TOTAL_NUMBER_OF_NODES = 9;
 const TOTAL_NUMBER_OF_DIFFERENT = 1;
 const selectedWordNode = randomlyChooseOneElement(ALL_WORDNODES);
+
 let diagram_data = generateGraphData(selectedWordNode);
 let props = {
     data: diagram_data,
