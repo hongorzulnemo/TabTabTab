@@ -118,11 +118,12 @@ function findDifferentWordNodes(word_id, cat_id, numDifferent) {
 // 3. Get 1 different word of different category
 // 4. Rewrite global array with these n elements;
 function generateGraphData(selectedWordNode) {
-    selectedWordNode.stage = 3;
+    // selectedWordNode.stage = 3;
 
     const selectedCategory = findOneCategory(selectedWordNode.id);
-    const newWordNodes = generateNewWordNodes(selectedWordNode.id, selectedCategory.id, TOTAL_NUMBER_OF_NODES - 2);
-    const differentWordNodes = findDifferentWordNodes(selectedWordNode.id, selectedCategory.id, 2);
-    const diagram_data = [...newWordNodes, ...differentWordNodes, selectedWordNode];
+    const newWordNodes = generateNewWordNodes(selectedWordNode.id, selectedCategory.id, TOTAL_NUMBER_OF_NODES - 1);
+    const differentWordNodes = findDifferentWordNodes(selectedWordNode.id, selectedCategory.id, TOTAL_NUMBER_OF_DIFFERENT);
+    differentWordNodes.forEach(dn => dn.stage = 3);
+    const diagram_data = [...newWordNodes, ...differentWordNodes];
     return diagram_data;
 }
