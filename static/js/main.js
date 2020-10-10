@@ -5,6 +5,11 @@
 // console.log(ALL_CATEGORY_WORDS)
 
 
+
+
+
+
+
 let diagram_data = copy(ALL_WORDNODES, 4);
 let props = {
     data: diagram_data,
@@ -24,6 +29,17 @@ updateWordMap()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 let wordTracker_data = copy(ALL_WORDNODES);
 let wordTrackerProps = {
     data: wordTracker_data,
@@ -36,3 +52,7 @@ function updateWordTracker() {
 
 updateWordTracker()
 updateWordTracker()
+
+
+
+

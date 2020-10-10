@@ -20,3 +20,17 @@ function copy(input_array, num = input_array.length) {
 function getExactSameWordNodeFromArray(input_array, d) {
     return copy(input_array).filter(elem => elem.id === d.id)[0];
 }
+
+
+function incrementStage(stage) {
+    const newStage = (stage >= 3) ? 3 : stage + 1;
+    return newStage;
+}
+
+function updateTrackerDataArray(input_array, d) {
+    input_array.forEach(wt => {
+        if(wt.id === d.id) {
+            wt.stage = incrementStage(wt.stage);
+        }
+    });
+}
