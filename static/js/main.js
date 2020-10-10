@@ -10,8 +10,8 @@ const selectedWordNode = randomlyChooseOneElement(ALL_WORDNODES);
 let diagram_data = generateGraphData(selectedWordNode);
 let props = {
     data: diagram_data,
-    padFactor: 50,
-    svgLength: 1200
+    padFactor: 20,
+    svgLength: 700
 }
 function updateWordMap() {
     word_map({...props, data: diagram_data});

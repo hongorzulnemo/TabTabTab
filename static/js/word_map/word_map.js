@@ -100,7 +100,7 @@ function word_map(props) {
 
 
     // Boxes Text Rect START
-    const box_text_rect_height = 100;
+    const box_text_rect_height = 50;
     const box_text_rect_width = boxLength;
     const box_text_rect = new GeneralUpdatePattern('box_text_rect', data, 'rect', main_ContGroup.group);        
     box_text_rect.merge
@@ -122,7 +122,7 @@ function word_map(props) {
         .style('opacity', 0)
         .attr('x', d => boxLength / 2)
         .attr('text-anchor', 'middle')
-        .attr('y', boxLength - 60 * 0.5 - boxPadding / 2)
+        .attr('y', boxLength - 60 * 0.5 - boxPadding / 2 + 14)
         .text(d => boxTextFunc(d))
         .attr('transform', translationFunc);
     box_text.exit.remove();
