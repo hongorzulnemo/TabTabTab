@@ -122,7 +122,7 @@ function generateGraphData(selectedWordNode) {
 
     const selectedCategory = findOneCategory(selectedWordNode.id);
     const newWordNodes = generateNewWordNodes(selectedWordNode.id, selectedCategory.id, TOTAL_NUMBER_OF_NODES - 2);
-    const differentWordNodes = findDifferentWordNodes(selectedWordNode.id, selectedCategory.id, 1);
+    const differentWordNodes = findDifferentWordNodes(selectedWordNode.id, selectedCategory.id, 2);
     const diagram_data = [...newWordNodes, ...differentWordNodes, selectedWordNode];
     return diagram_data;
 }

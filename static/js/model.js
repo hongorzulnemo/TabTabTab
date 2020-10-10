@@ -1,7 +1,7 @@
 
 
 const path_to_images = `../static/media/images/words/`;
-const file_extension = `.jpg`;
+const file_extension = `.svg`;
 class WordNode {
     constructor(name) {
         this.id = generateRandomId();
