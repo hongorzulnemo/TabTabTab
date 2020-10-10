@@ -1,6 +1,9 @@
 function generateRandomId() {
     return `ITEM_${Math.random().toString().slice(2,10)}`;
 }
+function generateRandomInteger(a, b) {
+    return Math.floor(Math.random() * b) + a;
+}
 function shuffle_array(input_array) {
     const output_array = [...input_array];
     const length = output_array.length;
@@ -17,9 +20,9 @@ function copy(input_array, num = input_array.length) {
     return [...input_array].splice(0, num).map(d => {return {...d}})
 }
 
-function getExactSameWordNodeFromArray(input_array, d) {
-    return copy(input_array).filter(elem => elem.id === d.id)[0];
-}
+// function getExactSameWordNodeFromArray(input_array, d) {
+//     return copy(input_array).filter(elem => elem.id === d.id)[0];
+// }
 
 
 function incrementStage(stage) {
