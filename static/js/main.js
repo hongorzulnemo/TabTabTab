@@ -20,3 +20,19 @@ function updateWordMap() {
 
 updateWordMap()
 updateWordMap()
+
+
+
+
+let wordTracker_data = copy(ALL_WORDNODES);
+let wordTrackerProps = {
+    data: wordTracker_data,
+    padFactor: 2,
+    svgLength: 400
+}
+function updateWordTracker() {
+    word_tracker({...wordTrackerProps, data: wordTracker_data});
+}
+
+updateWordTracker()
+updateWordTracker()

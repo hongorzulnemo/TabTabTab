@@ -9,7 +9,7 @@ function detNumberOfBoxesInEachRow(length) {
 }
 
 
-function word_map(props) {
+function word_tracker(props) {
     const {
         data: data,
         padFactor: padFactor,
@@ -24,7 +24,7 @@ function word_map(props) {
         d.i = crossed[1];
         d.j = crossed[0];
     })
-    const svg = d3.select('#word_map_svg');
+    const svg = d3.select('#word_tracker_svg');
     svg.attr('height', svgLength).attr('width', svgLength).style('background', '#fff');
     const boxLength = svgLength / numberOfBoxesInEachRow - padFactor;
     const translationFactor = svgLength / numberOfBoxesInEachRow;
@@ -43,7 +43,7 @@ function word_map(props) {
 
     const fillFunc = (d) => {
         let stage = d.stage;
-        return (stage == 1) ? '#e9c618ab' :
+        return (stage == 1) ? '#d4d4d4' :
         (stage == 2) ? '#de425bab' :
         (stage == 3) ? '#de425b' : '#000';
     }
@@ -94,22 +94,6 @@ function word_map(props) {
         })
         .on('mouseout', function(i, d) {
             d3.select(this).style('opacity', 0);
-        })
-        .on('click', function(i, d) {
-            const selected = copy(ALL_WORDNODES).filter(wd => wd.id === d.id)[0];
-            console.log(selected)
-            // diagram_data.forEach(dg => {
-            //     if(dg.id === d.id) {
-            //         dg.stage = 2;
-            //     } else {
-            //         dg.stage = 1;
-            //     }
-            // })
-            selected.stage = 2;
-            diagram_data = copy(shuffle_array([...ALL_WORDNODES]), 3);
-            diagram_data = [...diagram_data, selected];
-            // console.log(diagram_data)
-            updateWordMap();
         })
     boxes_shell.exit.remove();
 }
