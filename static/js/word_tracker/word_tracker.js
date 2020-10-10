@@ -9,6 +9,11 @@ function detNumberOfBoxesInEachRow(length) {
 }
 
 
+const fillFunc_color_array_word_tracker = ['#fff','#ddebff', '#85abe1', '#076ec2'];
+
+
+
+
 function word_tracker(props) {
     const {
         data: data,
@@ -43,11 +48,11 @@ function word_tracker(props) {
 
     const fillFunc = (d) => {
         let stage = d.stage;
-        return (stage == 1) ? '#d4d4d4' :
-        (stage == 2) ? '#00ff00ab' :
-        (stage == 3) ? '#de425b' : '#000';
+        return (stage == 1) ? fillFunc_color_array_word_tracker[1] :
+        (stage == 2) ? fillFunc_color_array_word_tracker[2] :
+        (stage == 3) ? fillFunc_color_array_word_tracker[3] : fillFunc_color_array_word_tracker[0];
     }
-
+    
 
     const boxStrokeFunc = (d) => {
         const focused = d.focused;
