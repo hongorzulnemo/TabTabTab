@@ -24,11 +24,23 @@ const DATA_INSTRUMENT = [
     'violin', 'flute', 'harmonica', 'harp', 'saxophone', 'french-horn', 'trumpet', 'grand-piano', 'organ',
     'drum', 'marimba', 'kalimba', 'speaker'
 ]
+const DATA_MEDICINE = [
+    'aids', 'ambulance', 'atomic', 'bed', 'cardiogram', 'DNA', 
+    'dropper', 'electrocardiogram', 'emergency-kit', 'flask', 
+    'hospital', 'lungs', 'magnifying-glass', 'medical-kit', 
+    'medicine', 'microscope', 'molecule', 'nurse', 'pills', 
+    'placeholder', 'report', 'scalpel', 'stethoscope', 
+    'strip', 'syringe', 'tablets', 'test-tube', 'thermometer', 
+    'tooth', 'transfusion', 'water', 'x-rays'
+];
+const DATA_ANIMAL = [
+    'cat', 'horse', 'gorilla', 'snake', 'toucan', 'jaguar', 'frog', 'lion', 'antilope', 'elephant', 'giraffe', 'dog', 'zebra', 'koala', 'coyote', 'ostrich', 'duck', 'shark', 'fish', 'octopus', 'sea star', 'goldfish', 'crocodile', 'turtle', 'bee', 'butterfly', 'bear', 'wolf', 'owl', 'rabbit', 'cow', 'pig', 'sheep'
+];
 const DATA_wordnodes = [
-    ...DATA_FOOD, ...DATA_SPORT, ...DATA_LOCATION, ...DATA_FURNITURE, ...DATA_INSTRUMENT
+    ...DATA_FOOD, ...DATA_SPORT, ...DATA_LOCATION, ...DATA_FURNITURE, ...DATA_INSTRUMENT, ...DATA_MEDICINE, ...DATA_ANIMAL
 ];
 
-const DATA_categories = ['food', 'sport', 'location', 'furniture', 'instrument'];
+const DATA_categories = ['food', 'sport', 'location', 'furniture', 'instrument', 'medicine', 'animal'];
 
 DATA_wordnodes.forEach(d => ALL_WORDNODES.push(new WordNode(d)));
 DATA_categories.forEach(d => ALL_CATEGORIES.push(new Category(d)));
@@ -40,6 +52,12 @@ DATA_FOOD.forEach(item => {
     ALL_CATEGORY_WORDS.push(new Category_word(
         ALL_WORDNODES.filter(d => d.name == item)[0].id,
         ALL_CATEGORIES.filter(d => d.name == 'food')[0].id,
+    ));
+})
+DATA_ANIMAL.forEach(item => {
+    ALL_CATEGORY_WORDS.push(new Category_word(
+        ALL_WORDNODES.filter(d => d.name == item)[0].id,
+        ALL_CATEGORIES.filter(d => d.name == 'animal')[0].id,
     ));
 })
 DATA_SPORT.forEach(item => {
@@ -66,8 +84,14 @@ DATA_INSTRUMENT.forEach(item => {
         ALL_CATEGORIES.filter(d => d.name == 'instrument')[0].id,
     ));
 })
+DATA_MEDICINE.forEach(item => {
+    ALL_CATEGORY_WORDS.push(new Category_word(
+        ALL_WORDNODES.filter(d => d.name == item)[0].id,
+        ALL_CATEGORIES.filter(d => d.name == 'medicine')[0].id,
+    ));
+})
 
-console.log(ALL_CATEGORY_WORDS)
+
 
 
 
@@ -90,54 +114,6 @@ Icons made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">m
 Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 */
 
-
-// const DATA_TECHNOLOGY = [
-//     'mobile-phone', 'camera', ''
-// ];
-// const DATA_ACADEMIC = [
-//     'diploma', 'university', 'school'
-// ];
-
-// const DATA_HYGIENE = [
-//     'cleaning', 'soap', 'shampoo', 'deoderant', 'tooth-brush'
-// ];
-// const DATA_HEALTH = [
-//     'clinic', 'hospital', 'medicine'
-// ];
-// const DATA_SHOPPING = [
-//     'shopping-cart', 'mall', 'shop', 'shopping-bag', 'discount'
-// ];
-// const DATA_FINANCE = [
-//     'bank', 'atm-machine', 'money', 'tax'
-// ];
-// const DATA_TRANSPORTATION = [
-//     'bus', 'car', 'ticker', 'airplane', 'train', 'bus-ticket'
-// ];
-
-// ALL_CATEGORY_WORDS.push(new Category_word(
-//     ALL_WORDNODES.filter(d => d.name == 'apple')[0].id,
-//     ALL_CATEGORIES.filter(d => d.name == 'food')[0].id,
-// ));
-// ALL_CATEGORY_WORDS.push(new Category_word(
-//     ALL_WORDNODES.filter(d => d.name == 'banana')[0].id,
-//     ALL_CATEGORIES.filter(d => d.name == 'food')[0].id,
-// ));
-// ALL_CATEGORY_WORDS.push(new Category_word(
-//     ALL_WORDNODES.filter(d => d.name == 'chicken')[0].id,
-//     ALL_CATEGORIES.filter(d => d.name == 'food')[0].id,
-// ));
-// ALL_CATEGORY_WORDS.push(new Category_word(
-//     ALL_WORDNODES.filter(d => d.name == 'milk')[0].id,
-//     ALL_CATEGORIES.filter(d => d.name == 'food')[0].id,
-// ));
-// ALL_CATEGORY_WORDS.push(new Category_word(
-//     ALL_WORDNODES.filter(d => d.name == 'cabbage')[0].id,
-//     ALL_CATEGORIES.filter(d => d.name == 'food')[0].id,
-// ));
-// ALL_CATEGORY_WORDS.push(new Category_word(
-//     ALL_WORDNODES.filter(d => d.name == 'farm')[0].id,
-//     ALL_CATEGORIES.filter(d => d.name == 'food')[0].id,
-// ));
 
 
 

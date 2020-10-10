@@ -4,7 +4,8 @@
 // console.log(ALL_CATEGORIES)
 // console.log(ALL_CATEGORY_WORDS)
 
-const TOTAL_NUMBER_OF_NODES = 8;
+const TOTAL_NUMBER_OF_NODES = 9;
+const TOTAL_NUMBER_OF_DIFFERENT = 1;
 const selectedWordNode = randomlyChooseOneElement(ALL_WORDNODES);
 let diagram_data = generateGraphData(selectedWordNode);
 let props = {

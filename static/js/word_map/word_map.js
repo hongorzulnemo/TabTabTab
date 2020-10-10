@@ -27,6 +27,8 @@ function word_map(props) {
         d.i = crossed[1];
         d.j = crossed[0];
     })
+
+    console.log(data)
     const svg = d3.select('#word_map_svg');
     svg.attr('height', svgLength).attr('width', svgLength).style('background', '#fff');
     const boxLength = svgLength / numberOfBoxesInEachRow - padFactor;
@@ -54,8 +56,7 @@ function word_map(props) {
     }
 
     const boxStrokeFunc = (d) => {
-        const focused = d.focused;
-        return (focused == true) ? '#000' : '#fff';
+        return (d.stage === 3) ? '#000' : '#fff';
     }
 
     // const boxTextXOffsetFunc = (d) => {
@@ -71,7 +72,7 @@ function word_map(props) {
         .attr('width', boxLength)
         .attr('fill', fillFunc)
         .attr('stroke', d => boxStrokeFunc(d))
-        .attr('stroke-width', 5)
+        .attr('stroke-width', 30)
         .attr('transform', translationFunc);
     boxes_GUP.exit.remove();
     // Boxes GUP END
@@ -103,6 +104,8 @@ function word_map(props) {
     const box_text_rect_width = boxLength;
     const box_text_rect = new GeneralUpdatePattern('box_text_rect', data, 'rect', main_ContGroup.group);        
     box_text_rect.merge
+        .attr('class', d => `box_text_rect box-${d.i}_${d.j}`)
+        .style('opacity', 0)
         .attr('x', d => boxLength / 2 - box_text_rect_width / 2 + boxPadding / 2)
         .attr('y', boxLength - box_text_rect_height - boxPadding / 2)
         .attr('width', box_text_rect_width - boxPadding)
@@ -115,6 +118,8 @@ function word_map(props) {
     // Boxes Text START
     const box_text = new GeneralUpdatePattern('box_text', data, 'text', main_ContGroup.group);        
     box_text.merge
+        .attr('class', d => `box_text box-${d.i}_${d.j}`)
+        .style('opacity', 0)
         .attr('x', d => boxLength / 2)
         .attr('text-anchor', 'middle')
         .attr('y', boxLength - 60 * 0.5 - boxPadding / 2)
@@ -132,14 +137,20 @@ function word_map(props) {
         .style('fill', '#000')
         .attr('height', boxLength)
         .attr('width', boxLength)
-        .attr('opacity', 0)
+        .attr('opacity', 0.3)
         .attr('transform', translationFunc);
     boxes_shell.merge
         .on('mouseover', function(i, d) {
-            d3.select(this).style('opacity', 0.5);
+            d3.select(this).style('opacity', 0);
+
+            d3.selectAll(`.box-${d.i}_${d.j}`)
+                .style('opacity', 1)
         })
         .on('mouseout', function(i, d) {
-            d3.select(this).style('opacity', 0);
+            d3.select(this).style('opacity', 0.3);
+
+            d3.selectAll(`.box-${d.i}_${d.j}`)
+                .style('opacity', 0)
         })
         .on('click', function(i, d) {
 
