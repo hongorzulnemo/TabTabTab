@@ -85,8 +85,10 @@ function word_map(props) {
     const box_image = new GeneralUpdatePattern('box_image', data, 'image', main_ContGroup.group);        
     box_image.merge
         .attr('href', imageHrefFunc)
-        .attr('height', boxLength)
-        .attr('width', boxLength)
+        .attr('height', boxLength - 40)
+        .attr('width', boxLength - 40)
+        .attr('x', 20)
+        .attr('y', 20)
         .attr('preserveAspectRatio', 'xMidYMid slice')
         .attr('transform', translationFunc);
     box_image.exit.remove();
@@ -100,8 +102,8 @@ function word_map(props) {
     box_text_rect.merge
         .attr('x', d => boxLength / 2 - box_text_rect_width / 2)
         .attr('y', boxLength - box_text_rect_height)
-        .attr('width', box_text_rect_width)
-        .attr('height', box_text_rect_height)
+        .attr('width', box_text_rect_width - 40)
+        .attr('height', box_text_rect_height - 40)
         .attr('fill', '#fff')
         .attr('transform', translationFunc);
     box_text_rect.exit.remove();
@@ -138,11 +140,26 @@ function word_map(props) {
         })
         .on('click', function(i, d) {
 
-            // Update Word Map
-            const selected = getExactSameWordNodeFromArray(ALL_WORDNODES, d);
-            selected.stage = 2;
-            diagram_data = copy(shuffle_array([...ALL_WORDNODES]), 3);
-            diagram_data = [...diagram_data, selected];
+            // // Update Word Map
+            // selected.stage = 2;
+            // // diagram_data = copy(shuffle_array([...ALL_WORDNODES]), 3);
+            // diagram_data = copy(generateSomeDataOfSameCategory(selected), 2);
+            // console.log(diagram_data)
+
+
+
+            
+            // 0. Create a new one
+            const selectedWordNode = copy(ALL_WORDNODES).filter(wd => wd.id === d.id)[0];
+            selectedWordNode.stage = 2;
+            // 1. Find out one of its categories
+            const selectedCategory = findOneCategory(selectedWordNode.id);
+            // 2. Get n-2 number of words of that category
+            const newWordNodes = generateNewWordNodes(selectedWordNode.id, selectedCategory.id, TOTAL_NUMBER_OF_NODES - 2);
+            // 3. Get 1 different word of different category
+            const differentWordNodes = findDifferentWordNodes(selectedWordNode.id, selectedCategory.id, 1);
+            // 4. Rewrite global array with these n elements;
+            diagram_data = [...newWordNodes, ...differentWordNodes, selectedWordNode];
             updateWordMap();
 
 
