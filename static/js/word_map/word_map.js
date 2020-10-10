@@ -48,7 +48,6 @@ function word_map(props) {
         (stage == 3) ? '#de425b' : '#000';
     }
 
-
     const boxStrokeFunc = (d) => {
         const focused = d.focused;
         return (focused == true) ? '#000' : '#fff';
@@ -60,9 +59,11 @@ function word_map(props) {
 
     const main_ContGroup = new ContainerGroup(svg, 'main_ContGroup');
     
+
+    // Boxes GUP START
     const boxes_GUP = new GeneralUpdatePattern('boxes_GUP', data, 'rect', main_ContGroup.group);
     boxes_GUP.merge
-        .style('opacity', 1)
+    .style('opacity', 1)
         .attr('height', boxLength)
         .attr('width', boxLength)
         .attr('fill', fillFunc)
@@ -70,7 +71,9 @@ function word_map(props) {
         .attr('stroke-width', 5)
         .attr('transform', translationFunc);
     boxes_GUP.exit.remove();
+    // Boxes GUP END
 
+    // Boxes Text START
     const box_text = new GeneralUpdatePattern('box_text', data, 'text', main_ContGroup.group); 
     box_text.merge
         .attr('x', d => boxLength / 2 - boxTextXOffsetFunc(d))
@@ -78,9 +81,10 @@ function word_map(props) {
         .text(d => boxTextFunc(d))
         .attr('transform', translationFunc);
     box_text.exit.remove();
-
+    // Boxes Text END
 
         
+    // Boxes Shell START
     const boxes_shell = new GeneralUpdatePattern('boxes_shell', data, 'rect', main_ContGroup.group);
     boxes_shell.merge
         .style('fill', '#000')
@@ -108,16 +112,12 @@ function word_map(props) {
 
 
 
-
             // Update Word Tracker
-            wordTracker_data.forEach(wt => {
-                if(wt.id === d.id) {
-                    wt.stage = 2;
-                }
-            });
-            updateWordTracker()
+            updateTrackerDataArray(wordTracker_data, d);
+            updateWordTracker();
 
         })
     boxes_shell.exit.remove();
+    // Boxes Shell END
 }
 
