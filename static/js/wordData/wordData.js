@@ -15,59 +15,110 @@ DATA_categories.forEach(d => ALL_CATEGORIES.push(new Category(d)));
 
 ALL_CATEGORY_WORDS.push(new Category_word(
     ALL_WORDNODES.filter(d => d.name == 'apple')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'food')[0].id,
+));
+ALL_CATEGORY_WORDS.push(new Category_word(
     ALL_WORDNODES.filter(d => d.name == 'banana')[0].id,
     ALL_CATEGORIES.filter(d => d.name == 'food')[0].id,
 ));
 ALL_CATEGORY_WORDS.push(new Category_word(
-    ALL_WORDNODES.filter(d => d.name == 'milk')[0].id,
-    ALL_WORDNODES.filter(d => d.name == 'farm')[0].id,
-    ALL_CATEGORIES.filter(d => d.name == 'location')[0].id,
+    ALL_WORDNODES.filter(d => d.name == 'chicken')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'food')[0].id,
 ));
+ALL_CATEGORY_WORDS.push(new Category_word(
+    ALL_WORDNODES.filter(d => d.name == 'milk')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'food')[0].id,
+));
+ALL_CATEGORY_WORDS.push(new Category_word(
+    ALL_WORDNODES.filter(d => d.name == 'cabbage')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'food')[0].id,
+));
+ALL_CATEGORY_WORDS.push(new Category_word(
+    ALL_WORDNODES.filter(d => d.name == 'farm')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'food')[0].id,
+));
+
+
+
 ALL_CATEGORY_WORDS.push(new Category_word(
     ALL_WORDNODES.filter(d => d.name == 'basketball')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'sport')[0].id,
+));
+ALL_CATEGORY_WORDS.push(new Category_word(
     ALL_WORDNODES.filter(d => d.name == 'golf')[0].id,
     ALL_CATEGORIES.filter(d => d.name == 'sport')[0].id,
 ));
 ALL_CATEGORY_WORDS.push(new Category_word(
-    ALL_WORDNODES.filter(d => d.name == 'tennis')[0].id,
-    ALL_WORDNODES.filter(d => d.name == 'golf')[0].id,
+    ALL_WORDNODES.filter(d => d.name == 'soccer')[0].id,
     ALL_CATEGORIES.filter(d => d.name == 'sport')[0].id,
 ));
 ALL_CATEGORY_WORDS.push(new Category_word(
     ALL_WORDNODES.filter(d => d.name == 'tennis')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'sport')[0].id,
+));
+
+
+ALL_CATEGORY_WORDS.push(new Category_word(
     ALL_WORDNODES.filter(d => d.name == 'gym')[0].id,
     ALL_CATEGORIES.filter(d => d.name == 'location')[0].id,
 ));
 ALL_CATEGORY_WORDS.push(new Category_word(
-    ALL_WORDNODES.filter(d => d.name == 'tennis')[0].id,
     ALL_WORDNODES.filter(d => d.name == 'beach')[0].id,
     ALL_CATEGORIES.filter(d => d.name == 'location')[0].id,
 ));
 ALL_CATEGORY_WORDS.push(new Category_word(
-    ALL_WORDNODES.filter(d => d.name == 'basketball')[0].id,
-    ALL_WORDNODES.filter(d => d.name == 'beach')[0].id,
+    ALL_WORDNODES.filter(d => d.name == 'mall')[0].id,
     ALL_CATEGORIES.filter(d => d.name == 'location')[0].id,
 ));
 ALL_CATEGORY_WORDS.push(new Category_word(
-    ALL_WORDNODES.filter(d => d.name == 'train')[0].id,
-    ALL_WORDNODES.filter(d => d.name == 'airplane')[0].id,
+    ALL_WORDNODES.filter(d => d.name == 'airport')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'location')[0].id,
+));
+ALL_CATEGORY_WORDS.push(new Category_word(
+    ALL_WORDNODES.filter(d => d.name == 'bank')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'location')[0].id,
+));
+ALL_CATEGORY_WORDS.push(new Category_word(
+    ALL_WORDNODES.filter(d => d.name == 'farm')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'location')[0].id,
+));
+
+
+ALL_CATEGORY_WORDS.push(new Category_word(
+    ALL_WORDNODES.filter(d => d.name == 'ticket')[0].id,
     ALL_CATEGORIES.filter(d => d.name == 'transportation')[0].id,
 ));
 ALL_CATEGORY_WORDS.push(new Category_word(
-    ALL_WORDNODES.filter(d => d.name == 'camera')[0].id,
+    ALL_WORDNODES.filter(d => d.name == 'car')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'transportation')[0].id,
+));
+ALL_CATEGORY_WORDS.push(new Category_word(
+    ALL_WORDNODES.filter(d => d.name == 'train')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'transportation')[0].id,
+));
+ALL_CATEGORY_WORDS.push(new Category_word(
+    ALL_WORDNODES.filter(d => d.name == 'bus')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'transportation')[0].id,
+));
+ALL_CATEGORY_WORDS.push(new Category_word(
+    ALL_WORDNODES.filter(d => d.name == 'airplane')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'transportation')[0].id,
+));
+
+
+ALL_CATEGORY_WORDS.push(new Category_word(
     ALL_WORDNODES.filter(d => d.name == 'airplane')[0].id,
     ALL_CATEGORIES.filter(d => d.name == 'technology')[0].id,
 ));
 ALL_CATEGORY_WORDS.push(new Category_word(
-    ALL_WORDNODES.filter(d => d.name == 'camera')[0].id,
-    ALL_WORDNODES.filter(d => d.name == 'beach')[0].id,
-    ALL_CATEGORIES.filter(d => d.name == 'location')[0].id,
+    ALL_WORDNODES.filter(d => d.name == 'mobile-phone')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'technology')[0].id,
 ));
 ALL_CATEGORY_WORDS.push(new Category_word(
     ALL_WORDNODES.filter(d => d.name == 'camera')[0].id,
-    ALL_WORDNODES.filter(d => d.name == 'airplane')[0].id,
-    ALL_CATEGORIES.filter(d => d.name == 'location')[0].id,
+    ALL_CATEGORIES.filter(d => d.name == 'technology')[0].id,
 ));
+
 
 
 
