@@ -96,20 +96,28 @@ function word_map(props) {
             d3.select(this).style('opacity', 0);
         })
         .on('click', function(i, d) {
-            const selected = copy(ALL_WORDNODES).filter(wd => wd.id === d.id)[0];
-            console.log(selected)
-            // diagram_data.forEach(dg => {
-            //     if(dg.id === d.id) {
-            //         dg.stage = 2;
-            //     } else {
-            //         dg.stage = 1;
-            //     }
-            // })
+
+            // Update Word Map
+            const selected = getExactSameWordNodeFromArray(ALL_WORDNODES, d);
             selected.stage = 2;
             diagram_data = copy(shuffle_array([...ALL_WORDNODES]), 3);
             diagram_data = [...diagram_data, selected];
-            // console.log(diagram_data)
             updateWordMap();
+
+
+
+
+
+
+            // Update Word Tracker
+            wordTracker_data.forEach(wt => {
+                if(wt.id === d.id) {
+                    wt.stage = 2;
+                }
+            });
+            updateWordTracker()
+
         })
     boxes_shell.exit.remove();
 }
+

@@ -16,3 +16,7 @@ function shuffle_array(input_array) {
 function copy(input_array, num = input_array.length) {
     return [...input_array].splice(0, num).map(d => {return {...d}})
 }
+
+function getExactSameWordNodeFromArray(input_array, d) {
+    return copy(input_array).filter(elem => elem.id === d.id)[0];
+}
