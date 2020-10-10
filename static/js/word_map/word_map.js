@@ -9,7 +9,7 @@ function detNumberOfBoxesInEachRow(length) {
 }
 
 
-const fillFunc_color_array_word_map = ['#fff','#e5e5e5', '#edaa9b', '#e56c56'];
+const fillFunc_color_array_word_map = ['#fff','#fff', '#fff', '#e56c56'];
 
 
 function word_map(props) {
@@ -56,7 +56,7 @@ function word_map(props) {
     }
 
     const boxStrokeFunc = (d) => {
-        return (d.stage === 3) ? '#000' : '#fff';
+        return (d.stage === 3) ? '#000' : '#939393';
     }
 
     // const boxTextXOffsetFunc = (d) => {
@@ -72,7 +72,10 @@ function word_map(props) {
         .attr('width', boxLength)
         .attr('fill', fillFunc)
         .attr('stroke', d => boxStrokeFunc(d))
-        .attr('stroke-width', 30)
+        .attr('stroke-width', 1)
+        .attr('rx', 20)
+        .attr('ry', 20)
+        // .attr('stroke-linecap', 'round')
         .attr('transform', translationFunc);
     boxes_GUP.exit.remove();
     // Boxes GUP END
@@ -106,11 +109,15 @@ function word_map(props) {
     box_text_rect.merge
         .attr('class', d => `box_text_rect box-${d.i}_${d.j}`)
         .style('opacity', 0)
-        .attr('x', d => boxLength / 2 - box_text_rect_width / 2 + boxPadding / 2)
-        .attr('y', boxLength - box_text_rect_height - boxPadding / 2)
-        .attr('width', box_text_rect_width - boxPadding)
-        .attr('height', box_text_rect_height)
+        // .attr('x', d => boxLength)
+        // .attr('y', boxLength)
+        .attr('width', boxLength)
+        .attr('stroke', d => boxStrokeFunc(d))
+        .attr('height', boxLength)
         .attr('fill', '#fff')
+        .attr('stroke-width', 1)
+        .attr('rx', 20)
+        .attr('ry', 20)
         .attr('transform', translationFunc);
     box_text_rect.exit.remove();
     // Boxes Text Rect END
@@ -122,7 +129,7 @@ function word_map(props) {
         .style('opacity', 0)
         .attr('x', d => boxLength / 2)
         .attr('text-anchor', 'middle')
-        .attr('y', boxLength - 60 * 0.5 - boxPadding / 2 + 14)
+        .attr('y', boxLength / 2 + 12)
         .text(d => boxTextFunc(d))
         .attr('transform', translationFunc);
     box_text.exit.remove();
@@ -137,7 +144,7 @@ function word_map(props) {
         .style('fill', '#000')
         .attr('height', boxLength)
         .attr('width', boxLength)
-        .attr('opacity', 0.3)
+        .attr('opacity', 0)
         .attr('transform', translationFunc);
     boxes_shell.merge
         .on('mouseover', function(i, d) {
@@ -147,7 +154,7 @@ function word_map(props) {
                 .style('opacity', 1)
         })
         .on('mouseout', function(i, d) {
-            d3.select(this).style('opacity', 0.3);
+            d3.select(this).style('opacity', 0);
 
             d3.selectAll(`.box-${d.i}_${d.j}`)
                 .style('opacity', 0)
