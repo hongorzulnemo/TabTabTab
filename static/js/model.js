@@ -1,7 +1,12 @@
+
+
+const path_to_images = `../static/media/images/words/`;
+const file_extension = `.jpg`;
 class WordNode {
     constructor(name) {
         this.id = generateRandomId();
         this.name = name;
+        this.imgUrl = `${path_to_images}${name}${file_extension}`;
         this.stage = 1;
     }
 }

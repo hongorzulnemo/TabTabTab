@@ -5,7 +5,7 @@ const ALL_CATEGORY_WORDS = [];
 
 const DATA_wordnodes = ['apple', 'banana', 'chicken', 'milk', 'cabbage', 'basketball',
 'soccer', 'baseball', 'tennis', 'golf', 'beach', 'gym', 'mall', 'airport', 'farm',
-'mobile phone', 'camera', 'bus', 'car', 'ticket', 'airplane', 'train'];
+'mobile-phone', 'camera', 'bus', 'car', 'ticket', 'airplane', 'train', 'bank'];
 const DATA_categories = ['food', 'sport', 'location', 'technology', 'transportation'];
 
 DATA_wordnodes.forEach(d => ALL_WORDNODES.push(new WordNode(d)));

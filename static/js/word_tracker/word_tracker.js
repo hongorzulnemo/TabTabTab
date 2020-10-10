@@ -76,13 +76,13 @@ function word_tracker(props) {
         .attr('transform', translationFunc);
     boxes_GUP.exit.remove();
 
-    const box_text = new GeneralUpdatePattern('box_text', data, 'text', main_ContGroup.group); 
-    box_text.merge
-        .attr('x', d => boxLength / 2 - boxTextXOffsetFunc(d))
-        .attr('y', boxLength / 2)
-        .text(d => boxTextFunc(d))
-        .attr('transform', translationFunc);
-    box_text.exit.remove();
+    // const box_text = new GeneralUpdatePattern('box_text', data, 'text', main_ContGroup.group); 
+    // box_text.merge
+    //     .attr('x', d => boxLength / 2 - boxTextXOffsetFunc(d))
+    //     .attr('y', boxLength / 2)
+    //     .text(d => boxTextFunc(d))
+    //     .attr('transform', translationFunc);
+    // box_text.exit.remove();
 
 
         

@@ -56,13 +56,11 @@ function word_map(props) {
         return (focused == true) ? '#000' : '#fff';
     }
 
-    const boxTextXOffsetFunc = (d) => {
-        return d.name.length*3.5; // needs to scale this!!!
-    }
+    // const boxTextXOffsetFunc = (d) => {
+    //     return d.name.length*25; // needs to scale this!!!
+    // }
 
     const main_ContGroup = new ContainerGroup(svg, 'main_ContGroup');
-    
-
     // Boxes GUP START
     const boxes_GUP = new GeneralUpdatePattern('boxes_GUP', data, 'rect', main_ContGroup.group);
     boxes_GUP.merge
@@ -76,15 +74,51 @@ function word_map(props) {
     boxes_GUP.exit.remove();
     // Boxes GUP END
 
+    // svg.append('image').attr('href', 'https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png')
+    // .attr('height', boxLength)
+    // .attr('width', boxLength)
+
+    const imageHrefFunc = (d) => {
+        return d.imgUrl;
+    }
+    // Boxes Image START
+    const box_image = new GeneralUpdatePattern('box_image', data, 'image', main_ContGroup.group);        
+    box_image.merge
+        .attr('href', imageHrefFunc)
+        .attr('height', boxLength)
+        .attr('width', boxLength)
+        .attr('preserveAspectRatio', 'xMidYMid slice')
+        .attr('transform', translationFunc);
+    box_image.exit.remove();
+    // Boxes Image END
+
+
+    // Boxes Text Rect START
+    const box_text_rect_height = 100;
+    const box_text_rect_width = boxLength;
+    const box_text_rect = new GeneralUpdatePattern('box_text_rect', data, 'rect', main_ContGroup.group);        
+    box_text_rect.merge
+        .attr('x', d => boxLength / 2 - box_text_rect_width / 2)
+        .attr('y', boxLength - box_text_rect_height)
+        .attr('width', box_text_rect_width)
+        .attr('height', box_text_rect_height)
+        .attr('fill', '#fff')
+        .attr('transform', translationFunc);
+    box_text_rect.exit.remove();
+    // Boxes Text Rect END
+
     // Boxes Text START
-    const box_text = new GeneralUpdatePattern('box_text', data, 'text', main_ContGroup.group); 
+    const box_text = new GeneralUpdatePattern('box_text', data, 'text', main_ContGroup.group);        
     box_text.merge
-        .attr('x', d => boxLength / 2 - boxTextXOffsetFunc(d))
-        .attr('y', boxLength / 2)
+        .attr('x', d => boxLength / 2)
+        .attr('text-anchor', 'middle')
+        .attr('y', boxLength - 60 * 0.5)
         .text(d => boxTextFunc(d))
         .attr('transform', translationFunc);
     box_text.exit.remove();
     // Boxes Text END
+
+
 
         
     // Boxes Shell START

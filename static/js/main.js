@@ -13,8 +13,8 @@
 let diagram_data = copy(ALL_WORDNODES, 4);
 let props = {
     data: diagram_data,
-    padFactor: 2,
-    svgLength: 700
+    padFactor: 50,
+    svgLength: 1200
 }
 
 
