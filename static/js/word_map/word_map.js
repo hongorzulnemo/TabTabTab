@@ -9,6 +9,9 @@ function detNumberOfBoxesInEachRow(length) {
 }
 
 
+const fillFunc_color_array_word_map = ['#fff','#e5e5e5', '#edaa9b', '#e56c56'];
+
+
 function word_map(props) {
     const {
         data: data,
@@ -43,9 +46,9 @@ function word_map(props) {
 
     const fillFunc = (d) => {
         let stage = d.stage;
-        return (stage == 1) ? '#e9c618ab' :
-        (stage == 2) ? '#de425bab' :
-        (stage == 3) ? '#de425b' : '#000';
+        return (stage == 1) ? fillFunc_color_array_word_map[1] :
+        (stage == 2) ? fillFunc_color_array_word_map[2] :
+        (stage == 3) ? fillFunc_color_array_word_map[3] : fillFunc_color_array_word_map[0];
     }
 
     const boxStrokeFunc = (d) => {
