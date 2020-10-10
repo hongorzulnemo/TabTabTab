@@ -1,0 +1,19 @@
+.category-circles {
+    display: flex;
+    flex-wrap: wrap;
+    width: 750px - calc(15px * 3);
+    margin: auto;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    // background: #d4d4d4;
+}
+.category-circle {
+    border-radius: 50%;
+    width: 200px;
+    margin: 15px;
+    background: #fff;
+    height: 200px;
+    border: 0px solid #737171eb;
+    box-shadow: 0px 0px 4px 2px #595956db;
+}

@@ -1,4 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+.category-circles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 750px-calc(15px * 3);
+  margin: auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.category-circle {
+  border-radius: 50%;
+  width: 200px;
+  margin: 15px;
+  background: #fff;
+  height: 200px;
+  border: 0px solid #737171eb;
+  -webkit-box-shadow: 0px 0px 4px 2px #595956db;
+          box-shadow: 0px 0px 4px 2px #595956db;
+}
+
 .diagram-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,6 +68,7 @@
 
 .word-cont {
   padding: 10%;
+  position: relative;
 }
 
 .col1 {
@@ -142,15 +172,15 @@ button {
 
 #left-arrow {
   position: absolute;
-  top: 45%;
-  left: 10%;
+  top: calc(50% - 40px);
   height: 80px;
+  left: 0;
 }
 
 #right-arrow {
   height: 80px;
-  top: 45%;
-  right: 10%;
+  top: calc(50% - 40px);
+  right: 0;
   position: absolute;
 }
 

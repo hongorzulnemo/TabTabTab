@@ -9,18 +9,80 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <link rel="stylesheet" href="./static/css/style.css">
-    <script src="./static/js/main.js"></script>
 </head>
 <body>
     <div class="container word-cont">
         <a href="#"><img id="left-arrow" src="/static/assets/left-arrow.png" alt="arrow"></a>
-        <div id="learn-header">Choose and challenge yourself<div>
-        <div>
-            
+        <h1 id="learn-header">Choose and challenge yourself<h1>
+        <div class="category-circles">
+            <div class="category-circle"></div>
+            <div class="category-circle"></div>
+            <div class="category-circle"></div>
+            <div class="category-circle"></div>
+            <div class="category-circle"></div>
+            <div class="category-circle"></div>
+            <!-- <svg id="cat_circles_svg"></svg> -->
         </div>
         <a href="/tropy.html"><img id="right-arrow" src="/static/assets/right-arrow.png" alt="arrow"></a>
     </div>
     </div>
 </body>
+
+
+
+
+<script src="./static/js/helperFunc.js"></script>
+<script src="./static/js/model.js"></script>
+<script>
+
+    
+    
+    // function createCircle(data) {
+    //     const svg = d3.select('#cat_circles_svg');
+    //     const height = 500;
+    //     const width = 1000;
+
+    //     const crossed_array = d3.cross(d3.range(6), d3.range(2));
+    //     console.log(crossed_array)
+    //     const num = 3;
+    //     const padFactor = 2;
+    //     const boxLength = 1000 / num - padFactor;
+    //     const translationFactor = 1000 / num;
+
+    //     const translationFunc = (d) => {
+    //         let i = d[0];
+    //         let j = d[1];
+    //         let xDirection = i * translationFactor + padFactor / 2;
+    //         let yDirection = j * translationFactor + padFactor / 2;
+    //         return `translate(${xDirection}, ${yDirection})`;
+    //     };
+
+
+
+
+
+
+    //     svg.attr('height', height).attr('width', width).style('background', '#d4d4d4')
+    //     const main_ContGroup = new ContainerGroup(svg, 'main_ContGroup');
+    //     const cat_circ = new GeneralUpdatePattern('cat_circ', crossed_array, 'circle', main_ContGroup.group);
+    //     cat_circ.merge
+    //         .attr('transform', translationFunc)
+    //         // .attr('cx', d => d[0])
+    //         // .attr('cy', d => d[1]*1)
+    //         .attr('r', 100)
+    //         .attr('fill', '#fff')
+                
+    // }
+    // createCircle([1,2,3,4,5,6]);
+    // createCircle([1,2,3,4,5,6]);
+</script>
+
+
+
+
+
+
+
+
 
 </html>
