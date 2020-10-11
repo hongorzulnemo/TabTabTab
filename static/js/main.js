@@ -16,7 +16,7 @@
 // Progrees Bar
 // ChangeProgressBar(pBar1)
 const progressBarContainer = document.getElementById('progressBarContainer');
-const pBar1 = new ProgressBar('word-swimming1', 5);
+const pBar1 = new ProgressBar('word-swimming1', 10);
 progressBarContainer.appendChild(pBar1.progressComponent);
 
 
@@ -51,8 +51,8 @@ function updateWordMap() {
 
     updateProgress();
 }
-updateWordMap()
-updateWordMap()
+word_map({...props, data: DIAGRAM_DATA});
+word_map({...props, data: DIAGRAM_DATA});
 
 
 
