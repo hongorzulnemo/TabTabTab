@@ -9,19 +9,40 @@ function createCatCircDiv() {
     div.className = `category-circle`;
     return div;
 }
+function createCatCircDivTint() {
+    const div = document.createElement('div');
+    div.className = `category-circle-tint`;
+    return div;
+}
+function createCatCircDivSpan() {
+    const span = document.createElement('span');
+    return span;
+}
+function createCatCircImgDiv() {
+    const div = document.createElement('div');
+    div.className = `category-circle-img`;
+    return div;
+}
 const selectedSix = copy(shuffle_array(ALL_CATEGORIES), 6); 
 selectedSix.forEach(cat => {
     const div = createCatCircDiv();
-    div.textContent = cat.name;
-    div.style.background = `url(${cat.imgUrl})`;
-    div.style.backgroundRepeat = `no-repeat`;
-    div.style.backgroundSize = `contain`;
-    div.style.backgroundPosition = `center`;
+    const imgDiv = createCatCircImgDiv();
+    const divTint = createCatCircDivTint();
+    const span = createCatCircDivSpan();
+    span.textContent = cat.name;
+    imgDiv.style.background = `url(${cat.imgUrl})`;
+    imgDiv.style.backgroundRepeat = `no-repeat`;
+    imgDiv.style.backgroundSize = `contain`;
+    imgDiv.style.backgroundPosition = `center`;
 
-    div.addEventListener('click', () => {
+
+
+    imgDiv.addEventListener('click', () => {
         console.log(cat)
     });
-
+    div.appendChild(divTint);
+    div.appendChild(imgDiv);
+    div.appendChild(span);
     catCirclesWrapper.appendChild(div);
 
 });

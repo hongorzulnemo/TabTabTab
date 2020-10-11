@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 
 @import '_category.scss';
+@import '_clouds.scss';
+@import '_birds.scss';
 
 
 .diagram-container {
@@ -44,6 +46,7 @@
 .word-cont {
   padding: 10%;
   position: relative;
+  height: 100vh;
 }
 
 .col1 {
