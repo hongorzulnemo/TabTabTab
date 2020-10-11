@@ -298,9 +298,7 @@
 }
 
 .home-cont {
-  padding-right: 15% !important;
-  padding-left: 15% !important;
-  padding-top: 3%;
+  height: 100%;
 }
 
 .learn-cont {
@@ -309,24 +307,17 @@
   height: 100vh;
 }
 
-.col1 {
-  width: 50%;
-  padding-left: 5%;
-}
 
-.col2 {
-  width: 50%;
-}
-
-.flex_column {
+.flex-prop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column !important;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-top: 5%;
 }
 
 .navbar-nav {
@@ -378,7 +369,7 @@ button {
   height: 40px;
 }
 
-#home-page-text {
+.home-page-text {
   font-family: Playfair Display;
   font-size: 80px;
   font-weight: 700;
@@ -386,22 +377,21 @@ button {
   letter-spacing: 0em;
   text-align: left;
   color: #202336;
+  text-align: center;
+  box-shadow: 0px 4px 4px 0px #000000 25%;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 .start-btn {
   background: #FB8F1D;
-  width: 200px;
+  width: 250px;
   height: 60px;
   font-size: 1.5rem !important;
 }
 
 .align-center {
-  margin: auto;
-  padding-top: 10%;
-}
-
-.navbar-collapse {
-  padding-bottom: 10%;
+  padding-top: 3%;
 }
 
 .text-white {
@@ -446,6 +436,11 @@ button {
 
 #right-arrow:hover, #home-arrow:hover, .left-arrow:hover {
   height: 83px;
+}
+
+.header {
+  padding-top: 4%;
+  padding-bottom: 25%;
 }
 
 /*# sourceMappingURL=style.css.map */
