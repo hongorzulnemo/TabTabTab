@@ -45,6 +45,12 @@
   cursor: pointer;
 }
 
+.category-circle:hover {
+  height: 210px;
+  width: 210px;
+  transition: 0.01s;
+}
+
 .category-circle span {
   display: none;
   z-index: 50;
@@ -297,7 +303,7 @@
   padding-top: 3%;
 }
 
-.word-cont {
+.learn-cont {
   padding: 10%;
   position: relative;
   height: 100vh;
@@ -402,31 +408,27 @@ button {
   color: white;
 }
 
-#left-arrow {
-  position: absolute;
-  top: calc(50% - 40px);
-  height: 80px;
+.left-arrow {
   left: 0;
 }
 
-#right-arrow {
-  height: 80px;
-  top: calc(50% - 40px);
+#right-arrow, #home-arrow {
   right: 0;
-  position: absolute;
 }
 
-#home-arrow {
-  height: 80px;
-  top: 45%;
-  right: 10%;
+#right-arrow, #home-arrow, .left-arrow {
   position: absolute;
+  top: calc(50% - 40px);
+  height: 80px;
+  transition: .01s;
 }
+
 
 #learn-header {
   font-family: 'Comfortaa', cursive;
   font-size: 2rem;
   text-align: center;
+  padding-bottom: 3%;
 }
 
 #tropy {
@@ -437,6 +439,13 @@ button {
 }
 
 .tropy-cont {
-  padding-top: 18%;
+  padding: 10%;
+  position: relative;
+  height: 100vh;
 }
+
+#right-arrow:hover, #home-arrow:hover, .left-arrow:hover {
+  height: 83px;
+}
+
 /*# sourceMappingURL=style.css.map */
