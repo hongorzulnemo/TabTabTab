@@ -37,6 +37,27 @@ function updateTrackerDataArray(input_array, d) {
     });
 }
 
+
+
+
+
+
+function coverTheWholeScreen() {
+    const coverAll = document.getElementById('#cover-all-shadow');
+    coverAll.classList.remove('hidden');
+}
+function unCoverTheWholeScreen() {
+    const coverAll = document.getElementById('#cover-all-shadow');
+    coverAll.classList.add('hidden');
+}
+
+
+
+
+
+
+
+
 function calcRelative(a, b) {
     return Math.floor((a / b)*100);
 }
@@ -83,3 +104,12 @@ function generateGraphData(selectedWordNode) {
     const diagram_data = [...newWordNodes, ...differentWordNodes];
     return diagram_data;
 }
+
+
+
+
+
+
+
+
+

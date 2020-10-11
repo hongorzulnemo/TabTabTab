@@ -40,7 +40,7 @@ body {
     height: 90px;
 }
 
-#home-page-text {
+.home-page-text {
   font-family: Playfair Display;
   font-size: 80px;
   font-weight: 700;
@@ -48,6 +48,9 @@ body {
   letter-spacing: 0em;
   text-align: left;
   color: #202336;
+  text-align: center;
+  box-shadow: 0px 4px 4px 0px #000000 25%;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 button {
@@ -55,28 +58,31 @@ button {
   height: 40px;
 }
 
-.home-page-text {
-    font-family: Playfair Display;
-    font-size: 80px;
-    font-weight: 700;
-    line-height: 100px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #202336;
-}
+
 
 .start-btn {
   background: #FB8F1D;
-  width: 200px;
+  width: 250px;
   height: 60px;
   font-size: 1.5rem !important;
 }
 
 .align-center {
-    margin: auto;
-    padding-top: 10%;
+    display: flex;
+    justify-content: center;
 }
 
+.flex-prop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
 
 .text-white {
   color: white;
@@ -109,4 +115,8 @@ button {
   text-align: center;
 }
 
+.header {
+  padding-top: 8%;
+  padding-bottom: 14%;
+}
 /*# sourceMappingURL=style.css.map */
