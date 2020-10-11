@@ -1,0 +1,36 @@
+.hidden {
+    display: none;
+}
+
+.height-0 {
+    height: 0;
+}
+
+
+.col1 {
+    width: 50%;
+    padding-left: 5%;
+}
+
+.col2 {
+  width: 50%;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5%;
+}
+
+
+.home-cont {
+    padding-right: 15% !important;
+    padding-left: 15% !important;
+    padding-top: 3%;
+}
+
+.word-cont {
+  padding: 10%;
+  position: relative;
+  height: 100vh;
+}

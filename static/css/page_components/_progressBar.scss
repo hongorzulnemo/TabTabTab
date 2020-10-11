@@ -1,0 +1,48 @@
+$progress-bg: #0c8eff73;
+$barColor-bg: lighten(#0c8eff, 15%);
+$barHeight: 1.5rem;
+$barPadding: 5px;
+$levelTextWidth: 150px;
+$expandingBarTextWidth: 100px;
+.progress-parent {
+    width: 100%;
+    position: absolute;
+    top: 4%;
+    background: $progress-bg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 5px 0px #00000087;
+    .expandingBarText {
+        width: 80px;
+        background: #fff;
+        border-radius: 5px;
+        padding: $barPadding;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .progressBar-level-text {
+        width: $levelTextWidth;
+        display: flex;
+        justify-content: center;
+        .expandingBarText {
+            height: 50px;
+            width: $expandingBarTextWidth;
+        }
+    }
+    .expanding-bar-wrapper {
+        display: flex;
+        width: calc(100% - 100px - 20px - 150px);
+        padding: $barPadding;    
+        .expanding-bar {
+            width: 0;
+            height: $barHeight;
+            background: $barColor-bg;
+            transition: 1s ease-in-out;
+        }
+    }
+}

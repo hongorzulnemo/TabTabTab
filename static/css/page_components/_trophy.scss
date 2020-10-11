@@ -1,0 +1,31 @@
+.trophy-container {
+  position: relative;
+}
+
+
+
+$trophyLength: 180px;
+#trophy {
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -100%; 
+  left: calc(50% - 180px / 2);
+  .trophy-img {
+    height: $trophyLength;
+    width: $trophyLength;
+  }
+}
+
+.descendAscend {
+  animation: descendAscend 5s;
+}
+
+@keyframes descendAscend {
+  50% {
+    top: calc(45% - 180px / 2);
+  }
+}
+
+

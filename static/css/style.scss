@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+
+@import './small_components/_arrows.scss';
+@import './small_components/_birds.scss';
+@import './small_components/_clouds.scss';
+@import './small_components/_buttons.scss';
+
+
+@import './_general.scss';
+@import './_navigation.scss';
+@import './page_components/_category.scss';
+@import './page_components/_trophy.scss';
+@import './page_components/_progressBar.scss';
+@import './page_components/_word_map.scss';
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+    background-image: url('/static/assets/main-back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#tablogo {
+    height: 90px;
+}
+
+#home-page-text {
+  font-family: Playfair Display;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 100px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #202336;
+}
+
+
+.align-center {
+    margin: auto;
+    padding-top: 10%;
+}
+
+
+.text-white {
+  color: white;
+}
+
+#learn-header {
+  font-family: 'Comfortaa', cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

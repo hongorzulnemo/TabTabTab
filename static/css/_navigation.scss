@@ -1,0 +1,25 @@
+
+
+.navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  
+  .nav-item {
+    margin-left: 2rem;
+  }
+  
+  .nav-link {
+    font-size: 1.3rem;
+    color: #202336;
+  }
+
+  
+.navbar-collapse {
+    padding-bottom: 10%;
+  }
