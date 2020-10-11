@@ -60,10 +60,10 @@ function launchTrophyAnimation() {
     trophy.classList.add('descendAscend');
     setTimeout(() => {
         trophy.classList.remove('descendAscend');
-        unCoverTheWholeScreen();
+        // unCoverTheWholeScreen();
     }, 5500);
 
-    coverTheWholeScreen();
+    // coverTheWholeScreen();
 }
 
 

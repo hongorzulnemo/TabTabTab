@@ -43,11 +43,11 @@ function updateTrackerDataArray(input_array, d) {
 
 
 function coverTheWholeScreen() {
-    const coverAll = document.getElementById('#cover-all-shadow');
+    const coverAll = document.getElementById('cover-all-shadow');
     coverAll.classList.remove('hidden');
 }
 function unCoverTheWholeScreen() {
-    const coverAll = document.getElementById('#cover-all-shadow');
+    const coverAll = document.getElementById('cover-all-shadow');
     coverAll.classList.add('hidden');
 }
 

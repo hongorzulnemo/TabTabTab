@@ -339,6 +339,7 @@ button {
           align-items: center;
   font-size: 1.5rem;
   cursor: pointer;
+  transition: all 0.4s;
 }
 
 .category-circle span {
@@ -374,7 +375,7 @@ button {
 
 .category-circle:hover {
   width: 220px;
-  height: 220px
+  height: 220px;
 }
 
 .category-circle .category-circle-tint:hover + .category-circle-img {
@@ -395,12 +396,13 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  top: -100%;
-  left: calc(50% - 180px / 2);
+  top: calc(25% - 180px / 2);
+  left: calc(75% - 180px / 2);
 }
 
 #trophy .trophy-img {
@@ -415,13 +417,13 @@ button {
 
 @-webkit-keyframes descendAscend {
   50% {
-    top: calc(45% - 180px / 2);
+    opacity: 1;
   }
 }
 
 @keyframes descendAscend {
   50% {
-    top: calc(45% - 180px / 2);
+    opacity: 1;
   }
 }
 
