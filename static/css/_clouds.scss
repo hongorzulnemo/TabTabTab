@@ -1,0 +1,77 @@
+
+.cloud {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+.cloud-sm {
+  width: 80px;
+  height: 80px;
+}
+.cloud-lg {
+  width: 250px;
+  height: 250px;
+}
+.cloud-xl {
+  width: 400px;
+  height: 400px;
+}
+
+
+
+.cloud-100 {
+  animation: floatSteady-100 10s linear infinite;
+}
+@keyframes floatSteady-100 {
+    50% {
+      transform: translate(100px, 0);
+    }
+}
+.cloud-50 {
+  animation: floatSteady-50 10s linear infinite;
+}
+
+@keyframes floatSteady-50 {
+    50% {
+      transform: translate(50px, 0);
+    }
+}
+.cloud-25 {
+  animation: floatSteady-25 5s linear infinite;
+}
+@keyframes floatSteady-25 {
+    40% {
+      transform: translate(25px, 0);
+    }
+    65% {
+      transform: translate(0, 5px);
+    }
+    85% {
+      transform: translate(0, -5px);
+    }
+}
+
+.cloud-100-r {
+  animation: floatSteady-100-r 10s linear infinite;
+}
+@keyframes floatSteady-100-r {
+    50% {
+      transform: translate(-100px, 0);
+    }
+}
+.cloud-50-r {
+  animation: floatSteady-50-r 10s linear infinite;
+}
+@keyframes floatSteady-50-r {
+    50% {
+      transform: translate(-50px, 0);
+    }
+}
+.cloud-25-r {
+  animation: floatSteady-25-r 5s linear infinite;
+}
+@keyframes floatSteady-25-r {
+    50% {
+      transform: translate(-25px, 0);
+    }
+}

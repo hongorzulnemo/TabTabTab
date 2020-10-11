@@ -2,14 +2,12 @@
 
 const path_to_images_wordNode = `../static/media/images/words/`;
 const path_to_images_category = `../static/media/images/categories/`;
-const file_extension = `.jpg`;
-const file_extension_cat = `.svg`;
+const file_extension = `.svg`;
 class WordNode {
     constructor(name) {
         this.id = generateRandomId();
-        this.name = name[1];
-        this.translation = name[0];
-        this.imgUrl = `${path_to_images_wordNode}${name[1]}${file_extension}`;
+        this.name = name;
+        this.imgUrl = `${path_to_images_wordNode}${name}${file_extension}`;
         this.stage = 1;
     }
 }
@@ -18,7 +16,7 @@ class Category {
     constructor(name) {
         this.id = generateRandomId();
         this.name = name;
-        this.imgUrl = `${path_to_images_category}${name}${file_extension_cat}`;
+        this.imgUrl = `${path_to_images_category}${name}${file_extension}`;
     }
 }
 

@@ -42,7 +42,7 @@ function word_map(props) {
     };
 
     const boxTextFunc = (d) => {
-        return d.translation;
+        return d.name;
     }
 
     // console.log('----')

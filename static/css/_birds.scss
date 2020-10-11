@@ -1,0 +1,22 @@
+
+.bird {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+}
+
+
+
+
+.bird-100 {
+  animation: floatSteady-100 10s infinite;
+}
+@keyframes floatSteady-100 {
+    50% {
+      transform: translate(100px, 0);
+      transform: rotate(-40deg);
+    }
+    60% {
+        transform: translate(-100px, -300px);
+    }
+}

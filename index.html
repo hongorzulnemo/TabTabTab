@@ -8,30 +8,29 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <link rel="stylesheet" href="./static/css/style.css">
-    <script src="./static/js/main.js"></script>
+    <link rel="stylesheet" href="./static/css/_clouds.scss">
 </head>
 <body>
-    <div class="container-fluid home-cont">
-        <div class="header">
-            <nav class="navbar navbar-expand-lg">
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                  <img id="tablogo" src="/static/assets/logo.png" alt="logo">
-                  <ul class="navbar-nav ml-auto mt-lg-0">
-                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Partner</a></li>
-                    <li class="nav-item"><button type="button" class="btn login-btn">Login</button></li>
-                    <li class="nav-item"><button type="button" class="btn register-btn text-white">Register</button></li>
-                  </ul>
-                </div>
-            </nav>
-        </div>
-        <div class="flex_column">
-            <div class="col1">
-                <div id="home-page-text">Learn Funnier! TabTabTab Language~</div>
-                <div class="align-center"><a href="learn.html"><button class="btn start-btn text-white">Start Learning</button></a></div>
-            </div >
-            <div class="col2">
+    <div class="container">
+        <div class="home-cont">
+            <div class="header">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                      <img id="tablogo" src="/static/assets/sunlogo.png" alt="logo">
+                      <ul class="navbar-nav ml-auto mt-lg-0">
+                        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Partner</a></li>
+                        <li class="nav-item"><button type="button" class="btn login-btn">Login</button></li>
+                        <li class="nav-item"><button type="button" class="btn register-btn text-white">Register</button></li>
+                      </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="flex-prop">
+                    <div class="home-page-text">Fun Language</div>
+                    <div class="home-page-text">learning</div>
+                    <div class="align-center"><a href="learn.html"><button class="btn start-btn text-white">Start Learning</button></a></div>
             </div>
         </div>
     </div>
@@ -41,21 +40,21 @@
     <div class="clouds-container">
         <div class="cloud cloud-100-r cloud-xl" 
         style="
-            bottom: 100px; 
-            right: 100px; 
-            background: url(./static/assets/clouds.svg) center center / contain no-repeat;
-        "></div>
-        <div class="cloud cloud-50 cloud-sm" 
-        style="
-            bottom: 220px; 
-            left: 50px; 
+            bottom: 0; 
+            left: 15%; 
             background: url(./static/assets/clouds.svg) center center / contain no-repeat;
         "></div>
         <div class="cloud cloud-50-r cloud-lg" 
         style="
-            top: 400px; 
-            right: 50px; 
-            background: url(./static/assets/clouds.svg) center center / contain no-repeat;
+            top: 45%; 
+            right: 5%; 
+            background: url(./static/assets/fclouds.png) center center / contain no-repeat;
+        "></div>
+        <div class="cloud cloud-100-r cloud-xl" 
+        style="
+            top: 63%; 
+            right: 15%; 
+            background: url(./static/assets/fclouds.png) center center / contain no-repeat;
         "></div>
     </div>
 
@@ -63,40 +62,10 @@
     <div class="birds-container">
         <div class="bird bird-100" 
         style="
-            bottom: 200px; 
-            right: 500px; 
+            top: 35%;
+            left: 20%; 
             background: url(./static/assets/bird.svg) center center / contain no-repeat;
         "></div>
     </div>
-    
-
 
 </body>
-
-
-
-<style scoped>
-    body {
-        background-image: url('/static/assets/back-with-cloud.png');
-    }
-</style>
-
-<!-- <div id="mycontainer">
-     // htmldsifjijsfjsoij -->
-<!-- </div> -->
-
-
-
-
-
-
-<!-- <script src="./static/js/helperFunc.js"></script>
-<script src="./static/js/model.js"></script>
-<script src="./static/js/wordData/wordData.js"></script>
-
-<script src="./static/js/word_map/word_map.js"></script>
-<script src="./static/js/word_tracker/word_tracker.js"></script>
-
-<script src="./static/js/main.js"></script>
-</html> -->
-

@@ -73,7 +73,3 @@ function updateWordTracker() {
 
 updateWordTracker()
 updateWordTracker()
-
-
-
-

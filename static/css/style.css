@@ -374,6 +374,7 @@ button {
 
 .trophy-container {
   position: relative;
+  height: 100vh;
 }
 
 #trophy {
@@ -508,6 +509,17 @@ body {
   background-repeat: no-repeat;
 }
 
+.register-btn {
+  background: #FB8F1D;
+  width: 140px;
+}
+
+.login-btn {
+  border: 1px solid #FB8F1D;
+  width: 140px;
+  color: #FB8F1D;
+}
+
 #tablogo {
   height: 90px;
 }
@@ -522,6 +534,28 @@ body {
   color: #202336;
 }
 
+button {
+  border-radius: 10px !important;
+  height: 40px;
+}
+
+.home-page-text {
+  font-family: Playfair Display;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 100px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #202336;
+}
+
+.start-btn {
+  background: #FB8F1D;
+  width: 200px;
+  height: 60px;
+  font-size: 1.5rem !important;
+}
+
 .align-center {
   margin: auto;
   padding-top: 10%;
@@ -529,6 +563,27 @@ body {
 
 .text-white {
   color: white;
+}
+
+#left-arrow {
+  position: absolute;
+  top: calc(50% - 40px);
+  height: 80px;
+  left: 0;
+}
+
+#right-arrow {
+  height: 80px;
+  top: calc(50% - 40px);
+  right: 0;
+  position: absolute;
+}
+
+#home-arrow {
+  height: 80px;
+  top: 45%;
+  right: 10%;
+  position: absolute;
 }
 
 #learn-header {
